@@ -8,7 +8,17 @@ import glob
 import re
 import numpy as np
 import pandas as pd
-#import tensorflow as tf
+import cv2
+import tensorflow as tf
+
+# Flask utils
+from flask import Flask, redirect, url_for, request, render_template
+from werkzeug.utils import secure_filename
+from gevent.pywsgi import WSGIServer
+
+
+# Define a flask app
+app = Flask(__name__)
 
 print(os.getcwd())
 
@@ -16,30 +26,42 @@ labels = ['Middle','Old','Young']
 
 # Keras
 from keras.models import load_model
-from keras.preprocessing import image
-
-# Flask utils
-from flask import Flask, redirect, url_for, request, render_template
-from werkzeug.utils import secure_filename
-#from gevent.pywsgi import WSGIServer
-
-# Define a flask app
-app = Flask(__name__)
+from keras.preprocessing import image 
+from keras.models import model_from_json
+from keras.optimizers import SGD
 
 MODEL_PATH = 'C:/Users/rohan/Desktop/Work/Age_detection_dataset/App/model/model.json'
 MODEL_PATH2 = 'C:/Users/rohan/Desktop/Work/Age_detection_dataset/App/model/model.h5' 
 
-model = load_model(MODEL_PATH2)
-#model.load_weights(MODEL_PATH2)
+# opening and store file in a variable
 
-model._make_predict_function()  
+json_file = open('model/model.json','r')
+loaded_model_json = json_file.read()
+json_file.close()
 
-def model_predict(img_path,model):
-    img = image.load_img(img_path, target_size=(64,64))
+# use Keras model_from_json to make a loaded model
+
+loaded_model = model_from_json(loaded_model_json)
+
+# load weights into new model
+
+loaded_model.load_weights('model/model.h5')
+print("Loaded Model from disk")
+
+opt = SGD(lr=0.01)
+
+loaded_model.compile(loss='categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
+
+
+loaded_model._make_predict_function()  
+
+def model_predict(img_path,loaded_model):
+    img = cv2.imread(img_path)
+    img = cv2.resize(img , (64,64))
     
     img = np.array(img, dtype="float") / 255.0
     
-    pred=model.predict(img)
+    pred=loaded_model.predict(img)
     
     return pred
 
@@ -64,7 +86,7 @@ def upload():
         f.save(file_path)
 
         # Make prediction
-        preds = model_predict(file_path, model)
+        preds = model_predict(file_path, loaded_model)
         
         i=preds.argmax(axis=1)
         vals=np.amax(preds,axis=1)
