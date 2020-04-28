@@ -40,5 +40,8 @@ Validation Accuracy : **84.29%**
 ![](output_images/sample_young_image.png)
 ![](output_images/sample_middle_image.png)
 ![](output_images/sample_old_image.png)
-
 ---
+![](output_images/sample_young_image3.png)
+![](output_images/sample_middle_image2.png)
+![](output_images/sample_old_image2.png)
+
