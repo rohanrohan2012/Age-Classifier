@@ -26,8 +26,8 @@ For **Age Classification**, following are the details of the model:
 8. Last layer maps to the 3 classes for age
   
 Trained with a learning rate of 0.01,Batch Size of 32 and with 75 to 100 epochs.
-Used Stochastic gradient descent optimizer and 70% split of train and validation data
-Used OpenCV for data visualization and augmentation
+Used Stochastic Gradient Descent (SGD) optimizer and 70% split of train and validation data.
+Used OpenCV library for image processing along with data visualization and augmentation.
 
 ![With 75 epochs](accuracy_loss_tradeoff_graphs/100epochs.png)
 ![With 100 epochs](accuracy_loss_tradeoff_graphs/75epochs.png)
