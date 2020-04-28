@@ -33,14 +33,14 @@ Used OpenCV library for image processing along with data visualization and augme
 ![With 100 epochs](accuracy_loss_tradeoff_graphs/75epochs.png)
 
 ## Libraries Used
-1.OpenCV
-2.Keras
-3.Numpy
-4.Pandas
-5.Seaborn
-6.Matplotlib
-7.Pickle
-8.SK-Learn
+1.OpenCV</br>
+2.Keras</br>
+3.Numpy</br>
+4.Pandas</br>
+5.Seaborn</br>
+6.Matplotlib</br>
+7.Pickle</br>
+8.sklearn</br
 
 ## Results
 
