@@ -40,7 +40,7 @@ Used OpenCV library for image processing along with data visualization and augme
 5.Seaborn</br>
 6.Matplotlib</br>
 7.Pickle</br>
-8.sklearn</br
+8.sklearn</br>
 
 ## Results
 
