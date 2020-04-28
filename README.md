@@ -33,22 +33,14 @@ Used OpenCV for data visualization and augmentation
 ![With 100 epochs](accuracy_loss_tradeoff_graphs/75epochs.png)
 
 ## Libraries Used
-OpenCV
----
-Keras
----
-Numpy
----
-Pandas
----
-Seaborn
----
-Matplotlib
----
-Pickle
----
-SK-Learn
----
+-OpenCV
+-Keras
+-Numpy
+-Pandas
+-Seaborn
+-Matplotlib
+-Pickle
+-sklearn
 
 ## Results
 
