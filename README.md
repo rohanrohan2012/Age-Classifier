@@ -56,6 +56,6 @@ Validation Accuracy : **84.29%**
 ![](output_images/sample_old_image2.png)
 
 ## Contributors
--Rohan Limaye: https://github.com/rylp
+-Rohan Limaye: https://github.com/rylp </br>
 -Rohan Naik: https://github.com/rohan-naik07 
 
