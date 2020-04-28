@@ -57,5 +57,5 @@ Validation Accuracy : **84.29%**
 
 ## Contributors
 Rohan Limaye: https://github.com/rylp
-Rohan Naik: 
+Rohan Naik: https://github.com/rohan-naik07 
 
