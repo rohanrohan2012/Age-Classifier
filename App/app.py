@@ -52,19 +52,20 @@ opt = SGD(lr=0.01)
 
 loaded_model.compile(loss='categorical_crossentropy',optimizer=opt,metrics=['accuracy'])
 
-
 loaded_model._make_predict_function()  
 
 def model_predict(img_path,loaded_model):
+    images=[]
     img = cv2.imread(img_path)
     img = cv2.resize(img , (64,64))
     
-    img = np.array(img, dtype="float") / 255.0
+    images.append(img)
     
-    pred=loaded_model.predict(img)
+    images = np.array(images, dtype="float") / 255.0
+    
+    pred=loaded_model.predict(images[0])
     
     return pred
-
 
 
 @app.route('/', methods=['GET'])
