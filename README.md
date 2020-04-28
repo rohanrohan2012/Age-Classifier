@@ -34,13 +34,21 @@ Used OpenCV for data visualization and augmentation
 
 ## Libraries Used
 OpenCV
+---
 Keras
+---
 Numpy
+---
 Pandas
+---
 Seaborn
+---
 Matplotlib
+---
 Pickle
+---
 SK-Learn
+---
 
 ## Results
 
