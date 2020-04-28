@@ -1,5 +1,5 @@
 
-# Age Classification using CNNs
+# Age Classification using CNN
 
 ## Overview
 A Convolutional Neural Network trained using Keras framework that categorizes images of people based on their ages. 
@@ -30,9 +30,11 @@ Used Stochastic gradient descent optimizer and 70% split of train and validation
 
 ![With 75 epochs](accuracy_loss_tradeoff_graphs/100epochs.png)
 ![With 100 epochs](accuracy_loss_tradeoff_graphs/75epochs.png)
+
 ## Results
-Training Accuracy : ##85.48%
-Validation Accuracy : ##84.29%
+
+Training Accuracy : **85.48%**
+Validation Accuracy : **84.29%**
 
 ![](output_images/sample_young_image.png)
 ![](output_images/sample_middle_image.png)
