@@ -32,6 +32,16 @@ Used OpenCV for data visualization and augmentation
 ![With 75 epochs](accuracy_loss_tradeoff_graphs/100epochs.png)
 ![With 100 epochs](accuracy_loss_tradeoff_graphs/75epochs.png)
 
+## Libraries Used
+OpenCV
+Keras
+Numpy
+Pandas
+Seaborn
+Matplotlib
+Pickle
+SK-Learn
+
 ## Results
 
 Training Accuracy : **85.48%**
