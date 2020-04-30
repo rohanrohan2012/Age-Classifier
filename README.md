@@ -49,8 +49,8 @@ Used OpenCV library for image processing along with data visualization and augme
 
 ## Results
 
-Training Accuracy : **85.48%**
-Validation Accuracy : **84.29%**
+Training Accuracy : **84.34%**
+Validation Accuracy : **84.91%**
 
 ![](output_images/sample_young_image.png)
 ![](output_images/sample_middle_image.png)
