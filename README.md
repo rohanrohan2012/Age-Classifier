@@ -5,6 +5,11 @@
 A Convolutional Neural Network designed from scratch trained using Keras framework that categorizes images of people based on their ages. 
 The model categorizes the input image based on three categories- Young , Middle and Old. 
 
+## Dataset
+**IMFDB** - Indian Movie Face Database was the dataset used for this project.
+IMFDB is a large unconstrained face database consisting of 34512 images of 100 Indian actors collected from more than 100 videos. All the images are manually selected and cropped from the video frames resulting in a high degree of variability interms of scale, pose, expression, illumination, age, resolution, occlusion, and makeup.
+url- http://cvit.iiit.ac.in/projects/IMFDB/
+
 ## Preprocessing
 The following preprocessing was applied to each image:
 
